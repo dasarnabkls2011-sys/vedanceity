@@ -130,4 +130,9 @@ ul.academic-list li {
   opacity: 0.75;
   border-style: dashed;
 }
+.paper-card a {
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
 
