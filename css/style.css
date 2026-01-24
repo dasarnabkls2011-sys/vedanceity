@@ -97,4 +97,37 @@ ul.academic-list {
 ul.academic-list li {
   margin-bottom: 8px;
 }
+/* Papers page */
+.paper-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 28px;
+}
+
+.paper-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.paper-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.paper-abstract {
+  color: #d1d5db;
+  margin-bottom: 14px;
+}
+
+.paper-link {
+  font-weight: 500;
+}
+
+.paper-placeholder {
+  opacity: 0.75;
+  border-style: dashed;
+}
 
