@@ -1,33 +1,50 @@
-<nav class="navbar">
-  <div class="nav-brand">Vedanceity</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="papers.html">Papers</a></li>
-    <li><a href="submit.html">Submit</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Submit · Vedanceity</title>
+  <meta name="description" content="How to submit a work to Vedanceity for indexing.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="header-grid" aria-hidden="true"></div>
 
-<div class="container">
-
-  <h1>Submit Your Work</h1>
-
-  <div class="card">
-    <p>
-      Vedanceity does not directly host PDFs.
-      All submissions must be archived on Zenodo with an assigned DOI.
-    </p>
-
-    <ul class="academic-list">
-      <li>Upload your paper to Zenodo</li>
-      <li>Ensure metadata is complete</li>
-      <li>Send the DOI link for indexing</li>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="nav-brand">Vedanceity</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="papers.html">Papers</a></li>
+      <li><a href="submit.html">Submit</a></li>
     </ul>
+  </nav>
 
-    <p>
-      Email submissions: <strong>vedanceity@proton.me</strong>
-    </p>
-  </div>
+  <main class="container">
+    <h1>Submit Your Work</h1>
 
-</div>
+    <div class="card">
+      <p>Vedanceity does not host PDFs. To be indexed, submissions must be archived on Zenodo and have an assigned DOI.</p>
 
+      <ul class="academic-list">
+        <li>Upload your paper to Zenodo (record must be public)</li>
+        <li>Include complete metadata: title, authors, abstract, keywords</li>
+        <li>Provide the DOI link for indexing (send below)</li>
+      </ul>
+
+      <p style="margin-top:12px">Email submissions / DOI links to: <strong><a href="mailto:vedanceity@proton.me">vedanceity@proton.me</a></strong></p>
+
+      <div style="margin-top:14px;color:var(--muted);font-size:0.9rem">
+        Example DOI link format:
+        <div style="background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;margin-top:8px;font-family:inherit">
+          https://doi.org/10.5281/zenodo.1234567
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span class="version-tag">pre-alpha 1.3</span>
+  </footer>
+</body>
+</html>
