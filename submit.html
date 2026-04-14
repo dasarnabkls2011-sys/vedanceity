@@ -10,16 +10,31 @@
 <body>
   <div class="header-grid" aria-hidden="true"></div>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="nav-brand">Vedanceity</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="papers.html">Papers</a></li>
-      <li><a href="submit.html">Submit</a></li>
-    </ul>
-  </nav>
+  <nav class="nav">
+  <a href="index.html" class="nav-item">
+    <i data-lucide="home"></i>
+    <span>Home</span>
+  </a>
 
+  <a href="about.html" class="nav-item">
+    <i data-lucide="user"></i>
+    <span>About</span>
+  </a>
+
+  <a href="papers.html" class="nav-item">
+    <i data-lucide="file-text"></i>
+    <span>Papers</span>
+  </a>
+
+  <a href="submit.html" class="nav-item">
+    <i data-lucide="upload"></i>
+    <span>Submit</span>
+  </a>
+</nav>
+
+<!-- add these near the end of body if not already present -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
   <main class="container">
     <h1>Submit Your Work</h1>
 
