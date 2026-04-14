@@ -3,117 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About · Vedanceity</title>
-  <meta name="description" content="About Vedanceity — mission, principles, and values.">
+  <title>Vedanceity</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="header-grid" aria-hidden="true"></div>
 
+  <!-- NAVBAR -->
   <nav class="nav">
-  <a href="index.html" class="nav-item">
-    <i data-lucide="home"></i>
-    <span>Home</span>
-  </a>
+    <a href="index.html" class="nav-item">
+      <i data-lucide="home"></i>
+      <span>Home</span>
+    </a>
 
-  <a href="about.html" class="nav-item">
-    <i data-lucide="user"></i>
-    <span>About</span>
-  </a>
+    <a href="about.html" class="nav-item">
+      <i data-lucide="user"></i>
+      <span>About</span>
+    </a>
 
-  <a href="papers.html" class="nav-item">
-    <i data-lucide="file-text"></i>
-    <span>Papers</span>
-  </a>
+    <a href="papers.html" class="nav-item">
+      <i data-lucide="file-text"></i>
+      <span>Papers</span>
+    </a>
 
-  <a href="submit.html" class="nav-item">
-    <i data-lucide="upload"></i>
-    <span>Submit</span>
-  </a>
-</nav>
+    <a href="submit.html" class="nav-item">
+      <i data-lucide="upload"></i>
+      <span>Submit</span>
+    </a>
+  </nav>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
-    <!-- About hero -->
-    <section class="about-hero" aria-labelledby="about-hero-title">
-      <div class="about-copy">
-        <h1 id="about-hero-title" class="h1">About Vedanceity</h1>
-        <p class="lead">An independent, open-access research index with a DOI-first approach — curated for theoretical, interdisciplinary, and emerging scientific work.</p>
 
-        <div class="section">
-          <h2>Mission</h2>
-          <p>To provide permanent, citable access to high-quality research using open infrastructure such as Zenodo and DOI-based preservation. We prioritize discoverability, author ownership, and transparent metadata.</p>
-        </div>
-
-        <div class="section">
-          <h2>How we operate</h2>
-          <ul class="academic-list">
-            <li>Index DOI-backed records (Zenodo canonical copies).</li>
-            <li>Verify metadata and surface authoritative links for citation.</li>
-            <li>Maintain a minimal, non-commercial index — we do not host PDFs.</li>
-          </ul>
-        </div>
-      </div>
-
-      <figure class="robot-illustration" role="img" aria-label="robot illustration">
-        <!-- Inline neon-stroked robot SVG -->
-        <svg width="240" height="240" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#4da3ff"/>
-              <stop offset="1" stop-color="#8b5cf6"/>
-            </linearGradient>
-            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="2.2" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-
-          <rect x="18" y="28" width="84" height="64" rx="8" stroke="url(#g1)" stroke-width="2.2" fill="rgba(255,255,255,0.02)" filter="url(#glow)"/>
-          <circle cx="60" cy="54" r="8" stroke="#a7d4ff" stroke-width="1.6" fill="#071023"/>
-          <rect x="44" y="72" width="32" height="6" rx="2" fill="url(#g1)" opacity="0.12"/>
-          <rect x="32" y="38" width="8" height="8" rx="1.6" fill="#0b1220" stroke="#4da3ff" stroke-width="0.9"/>
-          <rect x="80" y="38" width="8" height="8" rx="1.6" fill="#0b1220" stroke="#8b5cf6" stroke-width="0.9"/>
-          <path d="M34 96c6-6 12-6 18-6s12 0 18 6" stroke="rgba(255,255,255,0.04)" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-        <figcaption style="margin-top:12px;color:var(--muted);font-size:0.85rem"></figcaption>
-      </figure>
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="hero-title">Vedanceity</h1>
+      <p class="hero-sub">
+        Open research index for theoretical and interdisciplinary work.
+      </p>
     </section>
 
-    <!-- Principles grid -->
-    <section class="section">
-      <h2>Principles</h2>
-      <div class="principles-grid" role="list">
-        <article class="principle-card" role="listitem" aria-labelledby="p1">
-          <h3 id="p1">Open Access</h3>
-          <p class="muted">Free, barrier-free access for readers and authors.</p>
-        </article>
+    <!-- SAMPLE CARD -->
+    <div class="card">
+      <h3>Quantum Harmonic Gravity</h3>
+      <p class="paper-abstract">
+        A developing theoretical work exploring quantum corrections in harmonic spacetime models.
+      </p>
+      <a href="papers.html" class="paper-link">See papers →</a>
+    </div>
 
-        <article class="principle-card" role="listitem" aria-labelledby="p2">
-          <h3 id="p2">DOI-first</h3>
-          <p class="muted">We index canonical DOI records for persistent citation links.</p>
-        </article>
-
-        <article class="principle-card" role="listitem" aria-labelledby="p3">
-          <h3 id="p3">Author ownership</h3>
-          <p class="muted">Authors retain IP; we link to author-provided archives.</p>
-        </article>
-
-        <article class="principle-card" role="listitem" aria-labelledby="p4">
-          <h3 id="p4">Non-commercial</h3>
-          <p class="muted">Community-driven index without paywalls or ads.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="version-tag" onclick="toggleVersion()">
-  <span id="versionText">BETA 5.0</span>
-</div>
+      <span id="versionText">Alpha</span>
+    </div>
   </footer>
+
+  <!-- SCRIPTS (ALWAYS LAST) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    function toggleVersion(){
+      const el = document.getElementById("versionText");
+      el.innerText = el.innerText === "Alpha" ? "Beta" : "Alpha";
+    }
+  </script>
+
 </body>
 </html>
 
