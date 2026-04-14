@@ -3,71 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Papers · Vedanceity</title>
+  <title>Submit · Vedanceity</title>
+  <meta name="description" content="Submit a DOI-backed record for indexing by Vedanceity.">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // keep the same toggle for version tag used elsewhere
+    function toggleVersion(){
+      const el = document.getElementById("versionText");
+      el.innerText = el.innerText === "Alpha" ? "Beta" : "Alpha";
+    }
+  </script>
 </head>
-  <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
 <body>
   <div class="header-grid" aria-hidden="true"></div>
 
+  <!-- NAVBAR -->
   <nav class="nav">
-  <a href="index.html" class="nav-item">
-    <i data-lucide="home"></i>
-    <span>Home</span>
-  </a>
+    <a href="index.html" class="nav-item">
+      <i data-lucide="home"></i>
+      <span>Home</span>
+    </a>
 
-  <a href="about.html" class="nav-item">
-    <i data-lucide="user"></i>
-    <span>About</span>
-  </a>
+    <a href="about.html" class="nav-item">
+      <i data-lucide="user"></i>
+      <span>About</span>
+    </a>
 
-  <a href="papers.html" class="nav-item">
-    <i data-lucide="file-text"></i>
-    <span>Papers</span>
-  </a>
+    <a href="papers.html" class="nav-item">
+      <i data-lucide="file-text"></i>
+      <span>Papers</span>
+    </a>
 
-  <a href="submit.html" class="nav-item">
-    <i data-lucide="upload"></i>
-    <span>Submit</span>
-  </a>
-</nav>
+    <a href="submit.html" class="nav-item">
+      <i data-lucide="upload"></i>
+      <span>Submit</span>
+    </a>
+  </nav>
 
-<!-- add these near the end of body if not already present -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>lucide.createIcons();</script>
-  <main class="container">
-    <h1>Submit Your Work</h1>
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-card" role="region" aria-describedby="hero-desc">
+        <h1 id="hero-title" class="h1">Submit Your Work</h1>
+        <p id="hero-desc" class="lead">Vedanceity indexes DOI-backed records archived on recognized preservation services (e.g., Zenodo). We link to canonical archival records rather than hosting PDFs.</p>
+      </div>
 
-    <div class="card">
-      <p>Vedanceity does not host PDFs. To be indexed, submissions must be archived on Zenodo and have an assigned DOI.</p>
+      <aside class="mini-panel" role="complementary" aria-label="project status">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:700;color:var(--accent)">Status</div>
+            <div class="version-tag" style="margin-top:8px" onclick="toggleVersion()"><span id="versionText">BETA 5.0</span></div>
+          </div>
+          <div style="text-align:right;color:var(--muted);font-size:0.9rem">
+            <div>server</div>
+            <div style="margin-top:6px">uptime · nominal</div>
+          </div>
+        </div>
+      </aside>
+    </section>
 
-      <ul class="academic-list">
-        <li>Upload your paper to Zenodo (record must be public)</li>
-        <li>Include complete metadata: title, authors, abstract, keywords</li>
-        <li>Provide the DOI link for indexing (send below)</li>
-      </ul>
+    <section class="section" aria-labelledby="submit-instructions">
+      <h2 id="submit-instructions">How to submit</h2>
 
-      <p style="margin-top:12px">Email submissions / DOI links to: <strong><a href="mailto:vedanceity@proton.me">vedanceity@gmail.com</a></strong></p>
+      <div class="card">
+        <p>Vedanceity does not host PDFs. To be indexed, submissions must be archived on Zenodo and have an assigned DOI.</p>
 
-      <div style="margin-top:14px;color:var(--muted);font-size:0.9rem">
-        Example DOI link format:
-        <div style="background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;margin-top:8px;font-family:inherit">
-          https://doi.org/10.5281/zenodo.1234567
+        <ul class="academic-list">
+          <li>Upload your paper to Zenodo (record must be public)</li>
+          <li>Include complete metadata: title, authors, abstract, keywords</li>
+          <li>Provide the DOI link for indexing (send below)</li>
+        </ul>
+
+        <p style="margin-top:12px">Email submissions / DOI links to: <strong><a href="mailto:vedanceity@proton.me">vedanceity@proton.me</a></strong></p>
+
+        <div style="margin-top:14px;color:var(--muted);font-size:0.9rem">
+          Example DOI link format:
+          <div style="background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;margin-top:8px;font-family:inherit">
+            https://doi.org/10.5281/zenodo.1234567
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <span class="version-tag">BETA 5.0</span>
+    Vedanceity • Pre-Alpha 1.3 • Open Research Index
   </footer>
+
+  <!-- SCRIPTS (ALWAYS LAST) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
