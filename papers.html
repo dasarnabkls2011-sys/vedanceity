@@ -4,64 +4,92 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Papers · Vedanceity</title>
+  <meta name="description" content="Vedanceity — open research, DOI-indexed preprints and archival records.">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // keep version toggle available like on other pages
+    function toggleVersion(){
+      const el = document.getElementById("versionText");
+      el.innerText = el.innerText === "Alpha" ? "Beta" : "Alpha";
+    }
+  </script>
 </head>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
 <body>
   <div class="header-grid" aria-hidden="true"></div>
 
+  <!-- NAVBAR -->
   <nav class="nav">
-  <a href="index.html" class="nav-item">
-    <i data-lucide="home"></i>
-    <span>Home</span>
-  </a>
+    <a href="index.html" class="nav-item">
+      <i data-lucide="home"></i>
+      <span>Home</span>
+    </a>
 
-  <a href="about.html" class="nav-item">
-    <i data-lucide="user"></i>
-    <span>About</span>
-  </a>
+    <a href="about.html" class="nav-item">
+      <i data-lucide="user"></i>
+      <span>About</span>
+    </a>
 
-  <a href="papers.html" class="nav-item">
-    <i data-lucide="file-text"></i>
-    <span>Papers</span>
-  </a>
+    <a href="papers.html" class="nav-item">
+      <i data-lucide="file-text"></i>
+      <span>Papers</span>
+    </a>
 
-  <a href="submit.html" class="nav-item">
-    <i data-lucide="upload"></i>
-    <span>Submit</span>
-  </a>
-</nav>
+    <a href="submit.html" class="nav-item">
+      <i data-lucide="upload"></i>
+      <span>Submit</span>
+    </a>
+  </nav>
 
-<!-- add these near the end of body if not already present -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>lucide.createIcons();</script>
-  <main class="container">
-    <h1>Papers</h1>
-    <p class="page-intro">This page indexes scholarly works archived on Zenodo and identified by persistent DOI records. Vedanceity does not host full-text PDFs; we link to the canonical archival record.</p>
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-card" role="region" aria-describedby="hero-desc">
+        <h1 id="hero-title" class="h1">Papers</h1>
+        <p id="hero-desc" class="lead">This page indexes scholarly works archived on Zenodo and identified by persistent DOI records. Vedanceity does not host full-text PDFs; we link to canonical archival records for citation and long-term preservation.</p>
+      </div>
 
-    <article class="paper-card" role="article" aria-labelledby="paper-qhg">
-      <h3 id="paper-qhg">Quantum Harmonic Gravity</h3>
-      <div class="paper-meta">preprint · Zenodo</div>
-      <p class="paper-abstract">A theoretical work exploring harmonic models in quantum gravity. This is an evolving preprint archived on Zenodo for citation and long-term preservation.</p>
-      <a class="paper-link" href="https://zenodo.org/record/18233479" target="_blank" rel="noopener noreferrer">View record on Zenodo →</a>
-    </article>
+      <aside class="mini-panel" role="complementary" aria-label="project status">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:700;color:var(--accent)">Status</div>
+            <div class="version-tag" style="margin-top:8px" onclick="toggleVersion()"><span id="versionText">BETA 5.0</span></div>
+          </div>
+          <div style="text-align:right;color:var(--muted);font-size:0.9rem">
+            <div>server</div>
+            <div style="margin-top:6px">uptime · nominal</div>
+          </div>
+        </div>
+      </aside>
+    </section>
 
-    <section class="paper-card paper-placeholder" aria-hidden="true">
-      <h3>Additional works forthcoming</h3>
-      <p class="paper-abstract">Vedanceity is currently in pre-alpha. Newly indexed works will appear here as they are archived and verified.</p>
+    <section class="section" aria-labelledby="latest-title">
+      <h2 id="latest-title">Latest</h2>
+
+      <article class="paper-card" role="article" aria-labelledby="paper-qhg">
+        <h3 id="paper-qhg">Quantum Harmonic Gravity</h3>
+        <div class="paper-meta">preprint · Zenodo</div>
+        <p class="paper-abstract">A theoretical work exploring harmonic models in quantum gravity. This is an evolving preprint archived on Zenodo for citation and long-term preservation.</p>
+        <a class="paper-link" href="https://zenodo.org/record/18233479" target="_blank" rel="noopener noreferrer">View record on Zenodo →</a>
+      </article>
+
+      <section class="paper-card paper-placeholder" aria-hidden="true" style="margin-top:18px">
+        <h3>Additional works forthcoming</h3>
+        <p class="paper-abstract">Vedanceity is currently in pre-alpha. Newly indexed works will appear here as they are archived and verified.</p>
+      </section>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span class="version-tag">BETA 5.0</span>
+    Vedanceity • Pre-Alpha 1.3 • Open Research Index
   </footer>
+
+  <!-- SCRIPTS (ALWAYS LAST) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
