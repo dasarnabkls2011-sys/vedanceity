@@ -8,7 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   </head>
+<script>
+  
+function toggleVersion(){
+  const el = document.getElementById("versionText");
 
+  if(el.innerText === "Alpha"){
+    el.innerText = "Beta";
+  } else {
+    el.innerText = "Alpha";
+  }
+}
+</script>
   <body>
     <nav class="nav">
   <a href="#" class="nav-item">
