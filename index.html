@@ -5,21 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Vedanceity Research Archive</title>
   <meta name="description" content="Vedanceity — open research, DOI-indexed preprints and archival records.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  </head>
+
+  <body>
+    <nav class="nav">
+  <a href="#" class="nav-item">
+    <i data-lucide="home"></i>
+    <span>Home</span>
+  </a>
+
+  <a href="#" class="nav-item">
+    <i data-lucide="user"></i>
+    <span>About</span>
+  </a>
+
+  <a href="#" class="nav-item">
+    <i data-lucide="file-text"></i>
+    <span>Papers</span>
+  </a>
+
+  <a href="#" class="nav-item">
+    <i data-lucide="upload"></i>
+    <span>Submit</span>
+  </a>
+</nav>
+    <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
   <div class="header-grid" aria-hidden="true"></div>
-
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="nav-brand">Vedanceity</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="papers.html">Papers</a></li>
-      <li><a href="submit.html">Submit</a></li>
-    </ul>
-  </nav>
-
+    
   <main class="container" role="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-card" role="region" aria-describedby="hero-desc">
