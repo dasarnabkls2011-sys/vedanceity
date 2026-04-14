@@ -5,18 +5,17 @@ body{
 h1,h2,h3{
   font-family:'Space Grotesk', sans-serif;
 }
-:root{
-  .nav{
-  display:flex;
-  gap:12px;
-  background:rgba(255,255,255,0.04);
-  padding:10px;
-  border-radius:14px;
-  backdrop-filter:blur(12px);
-  border:1px solid var(--border);
-  width:max-content;
+  :root{
+  --bg:#020617;
+  --bg-soft:#0b1220;
+  --glass:rgba(255,255,255,0.05);
+  --glass-strong:rgba(255,255,255,0.08);
+  --text:#e6edf3;
+  --muted:#94a3b8;
+  --accent:#4da3ff;
+  --accent-2:#7c5cff;
+  --border:rgba(255,255,255,0.08);
 }
-
 .nav-item{
   display:flex;
   align-items:center;
