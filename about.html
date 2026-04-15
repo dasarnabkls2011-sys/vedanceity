@@ -109,12 +109,6 @@ window.addEventListener("scroll", () => {
       <span id="versionText">Alpha</span>
     </div>
   </footer>
-
-  <!-- SCRIPTS (ALWAYS LAST) -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-
     function toggleVersion(){
       const el = document.getElementById("versionText");
       el.innerText = el.innerText === "Alpha" ? "Beta" : "Alpha";
@@ -127,6 +121,61 @@ window.addEventListener("load", () => {
 });
 
 /* active nav highlight */
+const links = document.querySelectorAll(".nav-item");
+
+links.forEach(link => {
+  if(link.href === window.location.href){
+    link.classList.add("active");
+  }
+});
+</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+<script>
+/* PAGE LOAD FADE */
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 60){
+      el.classList.add("active");
+    }
+  });
+});
+
+/* CURSOR GLOW */
+const glow = document.querySelector(".cursor-glow");
+
+window.addEventListener("mousemove", e => {
+  if(glow){
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  }
+});
+
+/* NAVBAR SCROLL EFFECT */
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+
+  if(nav){
+    if(window.scrollY > 20){
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }
+});
+
+/* ACTIVE NAV HIGHLIGHT */
 const links = document.querySelectorAll(".nav-item");
 
 links.forEach(link => {
