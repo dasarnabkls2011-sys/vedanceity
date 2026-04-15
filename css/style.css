@@ -5,7 +5,8 @@ body{
 h1,h2,h3{
   font-family:'Space Grotesk', sans-serif;
 }
-  :root{
+
+:root{
   --bg:#020617;
   --bg-soft:#0b1220;
   --glass:rgba(255,255,255,0.05);
@@ -16,6 +17,7 @@ h1,h2,h3{
   --accent-2:#7c5cff;
   --border:rgba(255,255,255,0.08);
 }
+
 .nav-item{
   display:flex;
   align-items:center;
@@ -57,16 +59,6 @@ h1,h2,h3{
 .nav-item:hover::after{
   width:80%;
 }
-  --bg:#020617;
-  --bg-soft:#0b1220;
-  --glass:rgba(255,255,255,0.05);
-  --glass-strong:rgba(255,255,255,0.08);
-  --text:#e6edf3;
-  --muted:#94a3b8;
-  --accent:#4da3ff;
-  --accent-2:#7c5cff;
-  --border:rgba(255,255,255,0.08);
-}
 
 /* GLOBAL RESET */
 *{
@@ -85,6 +77,9 @@ body{
   min-height:100vh;
   line-height:1.6;
   overflow-x:hidden;
+  /* Make sure page text is visible even if JS fails */
+  opacity:1;
+  transition:opacity 0.4s ease;
 }
 
 /* SMOOTH SCROLL */
@@ -335,16 +330,6 @@ a.pulse{
 .highlight{
   border:1px solid rgba(124,92,255,0.4);
   box-shadow:0 0 40px rgba(124,92,255,0.2);
-}
-
-/* PAGE TRANSITION */
-body{
-  opacity:0;
-  transition:opacity 0.4s ease;
-}
-
-body.loaded{
-  opacity:1;
 }
 
 /* ACTIVE NAV */
