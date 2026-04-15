@@ -352,3 +352,84 @@ body.loaded{
   color:var(--text);
   background:rgba(255,255,255,0.08);
 }
+/* SCROLL REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* CURSOR GLOW */
+.cursor-glow{
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(124,92,255,0.15), transparent 60%);
+  pointer-events:none;
+  transform:translate(-50%, -50%);
+  z-index:0;
+}
+
+/* NAV SCROLL EFFECT */
+.nav{
+  position:sticky;
+  top:10px;
+  z-index:100;
+  transition:all 0.3s ease;
+}
+
+.nav.scrolled{
+  background:rgba(2,6,23,0.7);
+  backdrop-filter:blur(18px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* 3D CARD HOVER */
+.card{
+  transform:perspective(1000px) rotateX(0) rotateY(0);
+  transition:transform 0.3s ease, box-shadow 0.3s;
+}
+
+.card:hover{
+  transform:perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.02);
+}
+
+/* BUTTON RIPPLE */
+.button{
+  position:relative;
+  overflow:hidden;
+}
+
+.button::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:0;
+  background:rgba(255,255,255,0.2);
+  border-radius:50%;
+  transform:translate(-50%, -50%);
+  transition:width 0.4s, height 0.4s;
+}
+
+.button:active::after{
+  width:200px;
+  height:200px;
+}
+
+/* HERO GRADIENT */
+.hero-title{
+  background:linear-gradient(90deg, #4da3ff, #7c5cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0%}
+  100%{background-position:200%}
+}
