@@ -98,5 +98,21 @@
   <!-- SCRIPTS (ALWAYS LAST) -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
+  <script>
+/* page load animation */
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+/* active nav highlight */
+const links = document.querySelectorAll(".nav-item");
+
+links.forEach(link => {
+  if(link.href === window.location.href){
+    link.classList.add("active");
+  }
+});
+</script>
+  
 </body>
 </html>
