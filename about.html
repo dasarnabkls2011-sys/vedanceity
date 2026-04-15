@@ -12,7 +12,39 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
 
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 60){
+      el.classList.add("active");
+    }
+  });
+});
+
+/* CURSOR GLOW */
+const glow = document.querySelector(".cursor-glow");
+
+window.addEventListener("mousemove", e => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+
+/* NAV SCROLL EFFECT */
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+
+  if(window.scrollY > 20){
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+</script>
+  
 <body>
   <div class="cursor-glow"></div>
 
