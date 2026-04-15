@@ -48,51 +48,40 @@ function toggleVersion(){
 </script>
   <div class="header-grid" aria-hidden="true"></div>
     
-  <main class="container" role="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-card" role="region" aria-describedby="hero-desc">
-        <h1 id="hero-title" class="h1">Vedanceity</h1>
-        <p id="hero-desc" class="lead">Open research index for theoretical and interdisciplinary work. Permanent DOI-first archiving — simple, citable, human-readable.</p>
+ <main class="container">
 
-        <div class="section" style="margin-top:18px">
-          <h2>Overview</h2>
-          <p>Vedanceity curates DOI-backed records (Zenodo), surfaces metadata, and links to authoritative archival copies. We do not host PDFs — we link to the canonical archive for citation and long-term preservation.</p>
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="hero-title">Vedanceity</h1>
+    <p class="hero-sub">
+      A DOI-first research archive for theoretical and interdisciplinary science.
+    </p>
 
-        <div class="section">
-          <h2>How it works</h2>
-          <ul class="academic-list">
-            <li>Authors upload a public record to Zenodo and obtain a DOI.</li>
-            <li>Send the DOI link to our email for indexing.</li>
-            <li>We verify metadata, then list the work with a canonical link to the archive.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="hero-actions">
+      <a href="papers.html" class="button">Explore Research</a>
+      <a href="submit.html" class="button ghost">Submit Work</a>
+    </div>
+  </section>
 
-      <aside class="mini-panel" role="complementary" aria-label="project status">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <div>
-            <div style="font-weight:700;color:var(--accent)">Status</div>
-            <div class="version-tag" style="margin-top:8px">BETA 5.0</div>
-          </div>
-          <div style="text-align:right;color:var(--muted);font-size:0.9rem">
-            <div>server</div>
-            <div style="margin-top:6px">uptime · nominal</div>
-          </div>
-        </div>
-      </aside>
-    </section>
+  <!-- CREDIBILITY -->
+  <div class="cred">
+    <span>DOI Indexed</span>
+    <span>Zenodo Integrated</span>
+    <span>Open Access</span>
+  </div>
 
-    <section class="section" aria-labelledby="latest-title">
-      <h2 id="latest-title">Latest</h2>
-      <div class="card" role="article" aria-label="latest paper highlight">
-        <h3>Quantum Harmonic Gravity</h3>
-        <div class="paper-meta">preprint · archived on Zenodo</div>
-        <p class="paper-abstract">A developing theoretical work exploring quantum corrections in harmonic spacetime models. This index links to the canonical Zenodo record for citation and long-term preservation.</p>
-        <a class="paper-link" href="papers.html">See papers →</a>
-      </div>
-    </section>
-  </main>
+  <!-- FEATURED -->
+  <section class="section">
+    <h2>Featured Work</h2>
+
+    <div class="paper-card highlight">
+      <h3>Quantum Harmonic Gravity</h3>
+      <p>A theoretical framework exploring harmonic spacetime corrections.</p>
+      <a href="papers.html" class="paper-link">Read →</a>
+    </div>
+  </section>
+
+</main>
 
   <footer class="site-footer">
     Vedanceity • Pre-Alpha 1.3 • Open Research Index
