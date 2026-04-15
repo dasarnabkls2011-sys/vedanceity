@@ -128,17 +128,54 @@ window.addEventListener("scroll", () => {
   <footer class="site-footer">
     Vedanceity • Pre-Alpha 1.3 • Open Research Index
   </footer>
-
-  <!-- SCRIPTS (ALWAYS LAST) -->
+</script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
-  <script>
-/* page load animation */
+<script>
+  lucide.createIcons();
+</script>
+
+<script>
+/* PAGE LOAD FADE */
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
-/* active nav highlight */
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 60){
+      el.classList.add("active");
+    }
+  });
+});
+
+/* CURSOR GLOW */
+const glow = document.querySelector(".cursor-glow");
+
+window.addEventListener("mousemove", e => {
+  if(glow){
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+  }
+});
+
+/* NAVBAR SCROLL EFFECT */
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".nav");
+
+  if(nav){
+    if(window.scrollY > 20){
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }
+});
+
+/* ACTIVE NAV HIGHLIGHT */
 const links = document.querySelectorAll(".nav-item");
 
 links.forEach(link => {
