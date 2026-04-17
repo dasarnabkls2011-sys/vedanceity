@@ -1,10 +1,10 @@
-// consolidated site scripts - added by automation
+// safe consolidated site scripts - put this before </body> or include as external file
 document.addEventListener('DOMContentLoaded', () => {
-  // Toggle version helper (exposed globally for inline onclick use)
+  // Toggle version helper
   window.toggleVersion = function toggleVersion() {
     const el = document.getElementById('versionText');
     if (!el) return;
-    el.innerText = el.innerText === 'Alpha' || el.innerText === 'Alpha\u00A0' ? 'Beta' : 'Alpha';
+    el.innerText = el.innerText === 'Alpha' ? 'Beta' : 'Alpha';
   };
 
   // Reveal on scroll
@@ -42,17 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
   links.forEach(link => {
     try {
       if (link.href === window.location.href) link.classList.add('active');
-    } catch (e) { /* ignore */ }
+    } catch (e) { /* ignore cross-origin or other issues */ }
   });
 
-  // Page load fade and final reveal pass
+  // Page load fade (if you use body.loaded)
   window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    // ensure reveals run once after load
     handleReveal();
   });
-
-  // Initialize lucide icons if available
-  if (window.lucide && typeof lucide.createIcons === 'function') {
-    lucide.createIcons();
-  }
 });
